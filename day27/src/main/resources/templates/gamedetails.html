@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Game: <span data-th-text="${id}"></span></h1>
+
+    <div>
+        <img data-th-src="${game.image}" width="150" height="150">
+    </div>
+    <div>
+        <br>
+        <strong>Name: </strong><span data-th-text="${game.name}"></span>
+        <br>
+        <strong>Ranking: </strong><span data-th-text="${game.ranking}"></span>
+        <br>
+        <strong>Users Rating: </strong><span data-th-text="${game.usersRated}"></span>
+        <br>
+        <strong>More Info: </strong>
+        <a data-th-href="${game.url}">
+            Link to Website
+        </a>
+        <br>
+    </div>
+
+    <h2>Add Comment</h2>
+    <form action="#" data-th-action="@{/game/comment}" method="post">
+        <input type="hidden" name="gameId" data-th-value="${game.gid}">
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>
+                    <input type="text" name="username" size="30">
+                </td>
+            </tr>
+            <tr>
+                <td>Rating:</td>
+                <td>
+                    <select name="rating">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Comment: </td>
+                <td>
+                    <textarea name="comment"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td><button type="submit">submit</button></td>
+            </tr>
+            
+
+        </table>
+
+
+
+
+    </form>
+
+
+</body>
+
+</html>
