@@ -3,7 +3,7 @@
 ## Setup
 ### 1. export URl
 ```
-export MONGO_URL="mongodb+srv://cluster0.xfgf96o.mongodb.net"
+export MONGO_URL=MONGO_URL="mongodb+srv://tohdarryl:<password> @cluster0.nv77p9q.mongodb.net/<specify db (optional)>?retryWrites=true&w=majority"
 ```
 
 ### 2. export Username
